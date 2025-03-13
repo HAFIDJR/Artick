@@ -160,14 +160,14 @@
     </section>
     <section id="Advertisement" class="max-w-[1130px] mx-auto flex justify-center mt-[70px]">
         <div class="flex flex-col gap-3 shrink-0 w-fit">
-            <a href="#">
+            <a href="{{ $bannerads->link }}">
                 <div class="w-[900px] h-[120px] flex shrink-0 border border-[#EEF0F7] rounded-2xl overflow-hidden">
-                    <img src="assets/images/iklans/bannerWide1.png" class="object-cover w-full h-full"
+                    <img src="{{ Storage::url($bannerads->thumbnail) }}" class="object-cover w-full h-full"
                         alt="ads" />
                 </div>
             </a>
             <p class="font-medium text-sm leading-[21px] text-[#A3A6AE] flex gap-1">
-                Our Advertisement <a href="#" class="w-[18px] h-[18px]"><img
+                Our Advertisement <a href="{{ $bannerads->link }}" class="w-[18px] h-[18px]"><img
                         src="assets/images/icons/message-question.svg" alt="icon" /></a>
             </p>
         </div>
