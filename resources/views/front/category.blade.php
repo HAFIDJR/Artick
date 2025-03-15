@@ -187,5 +187,3 @@
         </div>
     </section>
 </body>
-
-</html>

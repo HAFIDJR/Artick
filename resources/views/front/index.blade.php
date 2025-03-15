@@ -12,6 +12,12 @@
     <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css" />
 </head>
 
+<h1>
+    @if (Auth::guard('web')->check())
+        <h1>{{ Auth::guard('web')->user()->name }}</h1>
+    @endif
+</h1>
+
 <body class="font-[Poppins] pb-[72px]">
     <nav id="Navbar" class="max-w-[1130px] mx-auto flex justify-between items-center mt-[30px]">
         <div class="logo-container flex gap-[30px] items-center">

@@ -1,15 +1,20 @@
-const $carousel = $('.main-carousel').flickity({
-    // options
-    cellAlign: 'left',
-    contain: true,
-    prevNextButtons: false,
-    pageDots: false,
-    wrapAround: true
-});
+$(document).ready(function () {
+    console.log("jQuery Loaded:", typeof $ !== "undefined");
+    console.log("Flickity Loaded:", typeof $.fn.flickity !== "undefined");
 
-$('.button--previous').on( 'click', function() {
-    $carousel.flickity('previous', true);
-});
-$('.button--next').on( 'click', function() {
-    $carousel.flickity('next', true);
+    const $carousel = $(".main-carousel").flickity({
+        // options
+        cellAlign: "left",
+        contain: true,
+        prevNextButtons: false,
+        pageDots: false,
+        wrapAround: true,
+    });
+
+    $(".button--previous").on("click", function () {
+        $carousel.flickity("previous", true);
+    });
+    $(".button--next").on("click", function () {
+        $carousel.flickity("next", true);
+    });
 });
