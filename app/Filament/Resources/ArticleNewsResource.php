@@ -88,7 +88,8 @@ class ArticleNewsResource extends Resource
                         'featured' => 'success',
                         'not_featured' => 'danger'
                     }),
-                Tables\Columns\TextColumn::make('category.name'),
+                Tables\Columns\TextColumn::make('category.name')
+                ,
                 Tables\Columns\ImageColumn::make('thumbnail')
             ])
             ->filters([
